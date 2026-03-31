@@ -17,7 +17,7 @@ class Trie:
 
     def insert(self, word: str) -> None:
         # Time: O(L) => Length of the word
-        # Space: O(L) => Length of the word and
+        # Space: O(L) => Length of the word
         curr = self.root
         for i in range(len(word)):
             char = word[i]
@@ -30,6 +30,7 @@ class Trie:
 
     def search(self, word: str) -> bool:
         # Time: O(L) => Length of the word
+        # Space: O(1)
         curr = self.root
         for i in range(len(word)):
             char = word[i]
@@ -40,6 +41,7 @@ class Trie:
 
     def startsWith(self, prefix: str) -> bool:
         # Time: O(L) => Length of the prefix
+        # Space: O(1)
         curr = self.root
         for i in range(len(prefix)):
             char = prefix[i]
