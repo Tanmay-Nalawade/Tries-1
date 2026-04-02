@@ -32,9 +32,9 @@ class Solution:
             prefix = []
             for char in word:
                 idx = ord(char) - ord('a')
-                if not curr.children[idx] or curr.isEnd: break
+                if not curr.children[idx] or curr.is_end: break
                 prefix.append(char)
                 curr = curr.children[idx]
-            if curr.isEnd: res.append(''.join(prefix))
+            if curr.is_end: res.append(''.join(prefix))
             else: res.append(word)
         return ' '.join(res)
